@@ -24,7 +24,7 @@ import lombok.Setter;
 @Table(name = "orders")
 public class Order {
     @Id
-    @GeneratedValue(generator = "orders_id_seq", strategy =  GenerationType.SEQUENCE)
+    @GeneratedValue(generator = "orders_id_seq", strategy = GenerationType.SEQUENCE)
     @SequenceGenerator(name = "orders_id_seq", sequenceName = "orders_id_seq", allocationSize = 1)
     private Long id;
     @ManyToOne
@@ -33,7 +33,7 @@ public class Order {
     private LocalDate acceptedDate;
     @OneToMany
     @JoinColumn(name = "order_id")
-    private List<Service>  includedServices;
+    private List<Service> includedServices;
     @OneToMany
     @JoinColumn(name = "order_id")
     private List<Goods> includedGoods;

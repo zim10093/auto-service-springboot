@@ -20,8 +20,9 @@ import lombok.Setter;
 @Table(name = "services")
 public class Service {
     @Id
-    @GeneratedValue(generator = "services_id_seq", strategy =  GenerationType.SEQUENCE)
-    @SequenceGenerator(name = "services_id_seq", sequenceName = "services_id_seq", allocationSize = 1)
+    @GeneratedValue(generator = "services_id_seq", strategy = GenerationType.SEQUENCE)
+    @SequenceGenerator(name = "services_id_seq", sequenceName = "services_id_seq",
+            allocationSize = 1)
     private Long id;
     @ManyToOne
     private Order order;
