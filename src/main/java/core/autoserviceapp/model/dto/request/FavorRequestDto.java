@@ -1,4 +1,4 @@
 package core.autoserviceapp.model.dto.request;
 
-public class ServiceRequestDto {
+public class FavorRequestDto {
 }

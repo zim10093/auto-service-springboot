@@ -1,6 +1,6 @@
 package core.autoserviceapp.model;
 
-public enum ServiceStatus {
+public enum FavorStatus {
     COMPLETED,
     UNCOMPLETED
 }

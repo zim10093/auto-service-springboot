@@ -33,7 +33,7 @@ public class Order {
     private LocalDate acceptedDate;
     @OneToMany
     @JoinColumn(name = "order_id")
-    private List<Service> includedServices;
+    private List<Favor> includedFavors;
     @OneToMany
     @JoinColumn(name = "order_id")
     private List<Goods> includedGoods;

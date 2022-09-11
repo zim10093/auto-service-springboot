@@ -1,7 +1,7 @@
 package core.autoserviceapp.controller;
 
-import core.autoserviceapp.model.dto.request.ServiceRequestDto;
-import core.autoserviceapp.model.dto.response.ServiceResponseDto;
+import core.autoserviceapp.model.dto.request.FavorRequestDto;
+import core.autoserviceapp.model.dto.response.FavorResponseDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -11,18 +11,18 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/services")
+@RequestMapping("/favors")
 @RequiredArgsConstructor
-public class ServicesController {
+public class FavorController {
     @PostMapping
-    public ServiceResponseDto createService(@RequestBody ServiceRequestDto dto) {
+    public FavorResponseDto createFavor(@RequestBody FavorRequestDto dto) {
         return null;
         //TODO
     }
 
     @PutMapping("/{id}")
-    public ServiceResponseDto updateService(@PathVariable long id,
-                                            @RequestBody ServiceRequestDto dto) {
+    public FavorResponseDto updateFavor(@PathVariable long id,
+                                          @RequestBody FavorRequestDto dto) {
         return null;
         //TODO
     }

@@ -1,4 +1,4 @@
 package core.autoserviceapp.model.dto.response;
 
-public class ServiceResponseDto {
+public class FavorResponseDto {
 }

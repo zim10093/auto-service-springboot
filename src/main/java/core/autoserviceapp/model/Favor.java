@@ -17,11 +17,11 @@ import lombok.Setter;
 @Getter
 @Setter
 @Entity
-@Table(name = "services")
-public class Service {
+@Table(name = "favors")
+public class Favor {
     @Id
-    @GeneratedValue(generator = "services_id_seq", strategy = GenerationType.SEQUENCE)
-    @SequenceGenerator(name = "services_id_seq", sequenceName = "services_id_seq",
+    @GeneratedValue(generator = "favors_id_seq", strategy = GenerationType.SEQUENCE)
+    @SequenceGenerator(name = "favors_id_seq", sequenceName = "favors_id_seq",
             allocationSize = 1)
     private Long id;
     @ManyToOne
@@ -31,5 +31,5 @@ public class Service {
     private BigDecimal price;
     @Enumerated(EnumType.STRING)
     @Column(length = 20)
-    private ServiceStatus serviceStatus;
+    private FavorStatus favorStatus;
 }
