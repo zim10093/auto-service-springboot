@@ -33,7 +33,7 @@ public class CarController {
         return toCarDtoMapper.toDto(carService.update(id,toCarMapper.toModel(dto)));
     }
 
-    @GetMapping("{id}")
+    @GetMapping("/{id}")
     public CarResponseDto getById(@PathVariable long id) {
         return toCarDtoMapper.toDto(carService.getById(id));
     }
