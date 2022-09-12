@@ -1,10 +1,10 @@
 --liquibase formatted sql
---changeset <ibondar>:<create-services-table>
-CREATE TABLE IF NOT EXISTS public.services
+--changeset <ibondar>:<create-favors-table>
+CREATE TABLE IF NOT EXISTS public.favors
 (
     id bigint NOT NULL,
     price decimal(19,2) DEFAULT NULL,
-    service_status varchar(20) DEFAULT NULL,
+    favor_status varchar(20) DEFAULT NULL,
     order_id bigint DEFAULT NULL,
     workman_id bigint DEFAULT NULL,
     PRIMARY KEY (id),
@@ -16,4 +16,4 @@ CREATE TABLE IF NOT EXISTS public.services
             REFERENCES workmans(id)
 );
 
---rollback DROP TABLE services;
+--rollback DROP TABLE favors;

@@ -3,7 +3,8 @@
 CREATE TABLE IF NOT EXISTS public.car_owners
 (
     id bigint NOT NULL,
-    PRIMARY KEY (id)
+    PRIMARY KEY (id),
+    name varchar(255) DEFAULT NULL
 );
 
 --rollback DROP TABLE car_owners;
