@@ -7,7 +7,7 @@ import lombok.Setter;
 @Getter
 @Setter
 public class GoodsResponseDto {
-    private long id;
+    private Long id;
     private String name;
     private BigDecimal price;
 }

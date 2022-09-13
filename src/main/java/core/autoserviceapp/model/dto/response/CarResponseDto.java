@@ -6,10 +6,10 @@ import lombok.Setter;
 @Getter
 @Setter
 public class CarResponseDto {
-    private long id;
+    private Long id;
     private String manufacturer;
     private String model;
-    private int year;
+    private Integer year;
     private String licenseNumber;
-    private long carOwnerId;
+    private Long carOwnerId;
 }

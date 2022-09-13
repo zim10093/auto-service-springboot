@@ -8,7 +8,7 @@ import lombok.Setter;
 @Getter
 @Setter
 public class CarOwnerResponseDto {
-    private long id;
+    private Long id;
     private String name;
     private List<Long> carIds;
     private List<Long> ordersIds;

@@ -19,13 +19,13 @@ import org.springframework.web.bind.annotation.RestController;
 @RequiredArgsConstructor
 public class WorkmanController {
     @GetMapping("/{id}/orders")
-    public List<OrderResponseDto> getOrders(@PathVariable long id) {
+    public List<OrderResponseDto> getOrders(@PathVariable Long id) {
         return null;
         //TODO
     }
 
     @GetMapping("/{id}/salary-calculation")
-    public WorkmanSalaryResponseDto calculateSalary(@PathVariable long id) {
+    public WorkmanSalaryResponseDto calculateSalary(@PathVariable Long id) {
         return null;
         //TODO
     }
@@ -37,7 +37,7 @@ public class WorkmanController {
     }
 
     @PutMapping("/{id}")
-    public WorkmanResponseDto updateWorkman(@PathVariable long id,
+    public WorkmanResponseDto updateWorkman(@PathVariable Long id,
                                             @RequestBody WorkmanRequestDto dto) {
         return null;
         //TODO

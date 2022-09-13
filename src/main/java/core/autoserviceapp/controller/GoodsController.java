@@ -29,12 +29,12 @@ public class GoodsController {
     }
 
     @PutMapping("/{id}")
-    public GoodsResponseDto updateGoods(@PathVariable long id, @RequestBody GoodsRequestDto dto) {
+    public GoodsResponseDto updateGoods(@PathVariable Long id, @RequestBody GoodsRequestDto dto) {
         return toGoodsDtoMapper.toDto(goodsService.update(id, toGoodsMapper.toModel(dto)));
     }
 
     @GetMapping("/{id}")
-    public GoodsResponseDto getById(@PathVariable long id) {
+    public GoodsResponseDto getById(@PathVariable Long id) {
         return toGoodsDtoMapper.toDto(goodsService.getById(id));
     }
 }

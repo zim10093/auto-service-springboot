@@ -5,7 +5,9 @@ import core.autoserviceapp.model.Car;
 import core.autoserviceapp.model.dto.request.CarRequestDto;
 import core.autoserviceapp.service.CarOwnerService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Component;
 
+@Component
 @RequiredArgsConstructor
 public class CarRequestMapper implements ToModelMapper<CarRequestDto, Car> {
     private final CarOwnerService carOwnerService;

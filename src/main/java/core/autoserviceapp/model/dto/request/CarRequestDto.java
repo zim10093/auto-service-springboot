@@ -6,7 +6,7 @@ import lombok.Getter;
 public class CarRequestDto {
     private String manufacturer;
     private String model;
-    private int year;
+    private Integer year;
     private String licenseNumber;
-    private long carOwner_id;
+    private Long carOwner_id;
 }

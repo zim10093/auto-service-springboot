@@ -29,12 +29,12 @@ public class CarController {
     }
 
     @PutMapping("/{id}")
-    public CarResponseDto updateCar(@PathVariable long id, @RequestBody CarRequestDto dto) {
+    public CarResponseDto updateCar(@PathVariable Long id, @RequestBody CarRequestDto dto) {
         return toCarDtoMapper.toDto(carService.update(id,toCarMapper.toModel(dto)));
     }
 
     @GetMapping("/{id}")
-    public CarResponseDto getById(@PathVariable long id) {
+    public CarResponseDto getById(@PathVariable Long id) {
         return toCarDtoMapper.toDto(carService.getById(id));
     }
 }

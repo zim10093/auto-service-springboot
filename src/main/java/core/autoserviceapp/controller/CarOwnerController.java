@@ -31,7 +31,7 @@ public class CarOwnerController {
     private final OrderService orderService;
 
     @GetMapping("/{id}/orders")
-    public List<OrderResponseDto> getOrders(@PathVariable long id) {
+    public List<OrderResponseDto> getOrders(@PathVariable Long id) {
         return orderService.findAllByCarOwnerId(id).stream()
                 .map(toOrderDtoMapper::toDto)
                 .collect(Collectors.toList());
@@ -43,13 +43,13 @@ public class CarOwnerController {
     }
 
     @PutMapping("/{id}")
-    public CarOwnerResponseDto updateCarOwner(@PathVariable long id,
+    public CarOwnerResponseDto updateCarOwner(@PathVariable Long id,
                                               @RequestBody CarOwnerRequestDto dto) {
         return toCarOwnerDtoMapper.toDto(carOwnerService.update(id, toCarOwnerMapper.toModel(dto)));
     }
 
     @GetMapping("/{id}")
-    public CarOwnerResponseDto getById(@PathVariable long id) {
+    public CarOwnerResponseDto getById(@PathVariable Long id) {
         return toCarOwnerDtoMapper.toDto(carOwnerService.getById(id));
     }
 }

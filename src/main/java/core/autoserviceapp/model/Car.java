@@ -21,7 +21,7 @@ public class Car {
     private Long id;
     private String manufacturer;
     private String model;
-    private int year;
+    private Integer year;
     private String licenseNumber;
     @OneToOne
     private CarOwner carOwner;

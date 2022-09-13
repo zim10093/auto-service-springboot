@@ -21,7 +21,7 @@ public class FavorController {
     }
 
     @PutMapping("/{id}")
-    public FavorResponseDto updateFavor(@PathVariable long id,
+    public FavorResponseDto updateFavor(@PathVariable Long id,
                                           @RequestBody FavorRequestDto dto) {
         return null;
         //TODO

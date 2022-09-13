@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequiredArgsConstructor
 public class OrderController {
     @GetMapping("/{id}")
-    public OrderCostResponseDto getOrderCost(@PathVariable long id) {
+    public OrderCostResponseDto getOrderCost(@PathVariable Long id) {
         return null;
         //TODO
     }
@@ -31,20 +31,20 @@ public class OrderController {
     }
 
     @PostMapping("/{id}")
-    public OrderResponseDto addGoodsToOrder(@PathVariable long id,
+    public OrderResponseDto addGoodsToOrder(@PathVariable Long id,
                                             @RequestBody AddGoodsToOrderRequestDto dto) {
         return null;
         //TODO
     }
 
     @PutMapping("/{id}")
-    public OrderResponseDto updateOrder(@PathVariable long id, @RequestBody OrderRequestDto dto) {
+    public OrderResponseDto updateOrder(@PathVariable Long id, @RequestBody OrderRequestDto dto) {
         return null;
         //TODO
     }
 
     @PutMapping("/{id}/status")
-    public OrderResponseDto updateOrderStatus(@PathVariable long id, ChangeOrderStatusDto dto) {
+    public OrderResponseDto updateOrderStatus(@PathVariable Long id, ChangeOrderStatusDto dto) {
         return null;
         //TODO
     }
