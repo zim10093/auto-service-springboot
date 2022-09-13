@@ -25,8 +25,8 @@ public class CarOwner {
     private String name;
     @OneToMany
     @JoinColumn(name = "car_owner_id")
-    private List<Car> car;
+    private List<Car> cars;
     @OneToMany
     @JoinColumn(name = "car_owner_id")
-    private List<Order> orderList;
+    private List<Order> orders;
 }
