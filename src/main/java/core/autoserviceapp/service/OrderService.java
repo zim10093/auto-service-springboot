@@ -7,4 +7,6 @@ public interface OrderService {
     List<Order> findAllById (Iterable<Long> ids);
 
     List<Order> findAllByCarOwnerId(Long id);
+
+    Order getById(Long id);
 }
