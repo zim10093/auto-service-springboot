@@ -21,4 +21,14 @@ public class OrderServiceImpl implements OrderService {
     public List<Order> findAllByCarOwnerId(Long id) {
         return orderRepository.findAllByCarOwnerId(id);
     }
+
+    @Override
+    public List<Order> findAllByWokrmanId(Long id) {
+        return orderRepository.findAllByWorkmanId(id);
+    }
+
+    @Override
+    public Order getById(Long id) {
+        return orderRepository.getReferenceById(id);
+    }
 }

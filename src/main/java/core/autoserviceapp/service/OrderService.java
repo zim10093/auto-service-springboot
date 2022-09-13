@@ -8,5 +8,7 @@ public interface OrderService {
 
     List<Order> findAllByCarOwnerId(Long id);
 
+    List<Order> findAllByWokrmanId(Long id);
+
     Order getById(Long id);
 }
