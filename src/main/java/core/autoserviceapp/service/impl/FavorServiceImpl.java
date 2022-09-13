@@ -3,6 +3,7 @@ package core.autoserviceapp.service.impl;
 import core.autoserviceapp.model.Favor;
 import core.autoserviceapp.repository.FavorRepository;
 import core.autoserviceapp.service.FavorService;
+import java.util.List;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -25,5 +26,10 @@ public class FavorServiceImpl implements FavorService {
     public Favor update(Long id, Favor favor) {
         favor.setId(id);
         return favorRepository.save(favor);
+    }
+
+    @Override
+    public List<Favor> getFavorsByIdIn(List<Long> ids) {
+        return favorRepository.getFavorsByIdIn(ids);
     }
 }

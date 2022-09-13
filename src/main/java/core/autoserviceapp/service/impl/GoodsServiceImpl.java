@@ -3,6 +3,7 @@ package core.autoserviceapp.service.impl;
 import core.autoserviceapp.model.Goods;
 import core.autoserviceapp.repository.GoodsRepository;
 import core.autoserviceapp.service.GoodsService;
+import java.util.List;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -25,5 +26,10 @@ public class GoodsServiceImpl implements GoodsService {
     public Goods update(Long id, Goods goods) {
         goods.setId(id);
         return goodsRepository.save(goods);
+    }
+
+    @Override
+    public List<Goods> getGoodsByIdIn(List<Long> ids) {
+        return goodsRepository.getGoodsByIdIn(ids);
     }
 }
