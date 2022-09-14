@@ -15,8 +15,8 @@ import org.springframework.stereotype.Service;
 @Service
 @RequiredArgsConstructor
 public class OrderServiceImpl implements OrderService {
-    private final static double GOODS_DISCOUNT = 0.01;
-    private final static double FAVOR_DISCOUNT = 0.02;
+    private static final double GOODS_DISCOUNT = 0.01;
+    private static final double FAVOR_DISCOUNT = 0.02;
     private final OrderRepository orderRepository;
 
     @Override

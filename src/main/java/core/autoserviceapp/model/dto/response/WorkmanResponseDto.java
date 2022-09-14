@@ -7,7 +7,7 @@ import lombok.Setter;
 @Getter
 @Setter
 public class WorkmanResponseDto {
-   private Long id;
-   private String name;
-   private List<Long> completedOrderIds;
+    private Long id;
+    private String name;
+    private List<Long> completedOrderIds;
 }

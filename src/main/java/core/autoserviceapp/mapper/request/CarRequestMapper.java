@@ -19,7 +19,7 @@ public class CarRequestMapper implements ToModelMapper<CarRequestDto, Car> {
         car.setModel(dto.getModel());
         car.setYear(dto.getYear());
         car.setLicenseNumber(dto.getLicenseNumber());
-        car.setCarOwner(carOwnerService.getById(dto.getCarOwner_id()));
+        car.setCarOwner(carOwnerService.getById(dto.getCarOwnerId()));
         return car;
     }
 }

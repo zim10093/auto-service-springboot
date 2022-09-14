@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor
 public class CarServiceImpl implements CarService {
     private final CarRepository carRepository;
+
     @Override
     public Car getById(Long id) {
         return carRepository.getReferenceById(id);

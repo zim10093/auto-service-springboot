@@ -1,6 +1,5 @@
 package core.autoserviceapp.service;
 
-
 import core.autoserviceapp.model.Goods;
 import java.util.List;
 
