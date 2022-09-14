@@ -66,33 +66,6 @@ public class OrderServiceImpl implements OrderService {
         return orderRepository.addGoodsToOrder(orderId, goodsId);
     }
 
-//    @Override
-//    public Order getOrderCost(Long id) {
-//        Order order = orderRepository.getReferenceById(id);
-//        long numberOfOrders = orderRepository
-//                .countOrdersByCarOwnerId(order.getCar().getCarOwner().getId());
-//
-//        List<BigDecimal> favorsPrices = order.getIncludedFavors().stream()
-//                .map(Favor::getPrice)
-//                .collect(Collectors.toList());
-//        List<BigDecimal> goodsPrices = order.getIncludedGoods().stream()
-//                .map(Goods::getPrice)
-//                .collect(Collectors.toList());
-//        BigDecimal favorTotalCost = calculateTotalCost(BigDecimal.valueOf(FAVOR_DISCOUNT),
-//                numberOfOrders, favorsPrices);
-//        BigDecimal goodsTotalCost = calculateTotalCost(BigDecimal.valueOf(GOODS_DISCOUNT),
-//                numberOfOrders, goodsPrices);
-//
-//        order.setTotalCost(favorTotalCost.add(goodsTotalCost));
-//        return orderRepository.save(order);
-//    }
-//
-//    private BigDecimal calculateTotalCost(BigDecimal discount, long orders,List<BigDecimal> prices) {
-//        return prices.stream()
-//                .reduce(BigDecimal.ZERO, BigDecimal::add)
-//                .subtract(BigDecimal.valueOf(orders).multiply(discount));
-//    }
-    //TODO
     @Override
     public Order getOrderCost(Long id) {
         Order order = orderRepository.getReferenceById(id);
