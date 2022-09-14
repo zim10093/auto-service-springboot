@@ -10,6 +10,7 @@ import core.autoserviceapp.model.dto.response.WorkmanResponseDto;
 import core.autoserviceapp.model.dto.response.WorkmanSalaryResponseDto;
 import core.autoserviceapp.service.OrderService;
 import core.autoserviceapp.service.WorkmanService;
+import java.math.BigDecimal;
 import java.util.List;
 import java.util.stream.Collectors;
 import lombok.RequiredArgsConstructor;
@@ -30,6 +31,7 @@ public class WorkmanController {
     private final ToModelMapper<WorkmanRequestDto, Workman> toWorkmanMapper;
     private final ToDtoMapper<WorkmanResponseDto, Workman> toWorkmanDtoMapper;
     private final ToDtoMapper<OrderResponseDto, Order> toOrderDtoMapper;
+    private final ToDtoMapper<WorkmanSalaryResponseDto, BigDecimal> toWorkmanSalaryDtoMapper;
 
     @GetMapping("/{id}/orders")
     public List<OrderResponseDto> getOrders(@PathVariable Long id) {
@@ -40,8 +42,7 @@ public class WorkmanController {
 
     @GetMapping("/{id}/salary-calculation")
     public WorkmanSalaryResponseDto calculateSalary(@PathVariable Long id) {
-        return null;
-        //TODO
+        return toWorkmanSalaryDtoMapper.toDto(workmanService.calculateSalary(id));
     }
 
     @PostMapping

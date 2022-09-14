@@ -1,6 +1,7 @@
 package core.autoserviceapp.service.impl;
 
 import core.autoserviceapp.model.Favor;
+import core.autoserviceapp.model.FavorStatus;
 import core.autoserviceapp.repository.FavorRepository;
 import core.autoserviceapp.service.FavorService;
 import java.util.List;
@@ -31,5 +32,15 @@ public class FavorServiceImpl implements FavorService {
     @Override
     public List<Favor> getFavorsByIdIn(List<Long> ids) {
         return favorRepository.getFavorsByIdIn(ids);
+    }
+
+    @Override
+    public List<Favor> getFavorsByWorkmanIdAndFavorStatus(Long id, FavorStatus status) {
+        return favorRepository.getFavorsByWorkmanIdAndFavorStatus(id, status);
+    }
+
+    @Override
+    public List<Favor> saveAll(Iterable<Favor> favors) {
+        return favorRepository.saveAll(favors);
     }
 }
